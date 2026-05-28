@@ -96,6 +96,11 @@ io.on('connection', (socket) => {
     // Send the current state to the newly connected client
     socket.emit('initialize-overlay', overlayState);
 
+    socket.on('request-state', () => {
+        console.log('Received an update request.');
+        socket.emit('answer', overlayState);
+    })
+
     // Receive admin commands
     socket.on('admin-command', (data) => {
         console.log('Received command:', data);
