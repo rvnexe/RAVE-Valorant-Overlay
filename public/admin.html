@@ -13,6 +13,7 @@
         const socket = io();
 
         let winby = {"bo5": "3", "bo3": "2", "bo1": "1"};
+        let localstate = {};
     
         // Update admin panel UI when state changes
         function updateAdminUI(state) {
@@ -34,15 +35,37 @@
             document.getElementById('logoR').style = `content: url("${state.logoR}")`;
             document.getElementById('scoreR').innerText = "■".repeat(state.scoreR) + "□".repeat(winby[state.format] - state.scoreR);
             document.getElementById('remR').innerText = state.timeout.R_remain;
+
+            if (state.half == "1") {
+                document.getElementById('tl').classList = "ct";
+                document.getElementById('tr').classList = "t";
+            } else if(state.half == "2"){
+                document.getElementById('tl').classList = "t";
+                document.getElementById('tr').classList = "ct";
+            }
         }
     
         // Initialize the admin panel with the current state
         socket.on('initialize-overlay', (state) => {
             updateAdminUI(state);
+            localstate = state;
         });
     
         // Listen for updates from the server
         socket.on('admin-update', (state) => {
+            updateAdminUI(state);
+            localstate = state;
+        });
+
+        // Request a state update to store locally
+        function requestState() {
+            socket.emit('request-state');
+            console.log('Sent an update request.');
+        }
+
+        // Process answer for state update request + also update the ui :p
+        socket.on('answer', (state) => {
+            localstate = state;
             updateAdminUI(state);
         });
     
@@ -62,27 +85,58 @@
             }
             socket.emit('admin-command', { action:'update', target:target, value:value });
         }
+
+        // Switch sides
+        function switchsides(){
+            if (localstate.half == "1") {
+                update('half', '2')
+            } else if(localstate.half == "2"){
+                update('half', '1')
+            }
+        }
     </script>
 </head>
 <body>
-    <h1>Admin Panel</h1>
-    <h2 class="din1" id="matchtitle">Event name - Event stage</h2>
+    <header>
+        <div>Admin Panel</div>
+        <div class="din1" id="matchtitle" style="font-size: 20px;">Event name - Event stage</div>
+    </header>
+    <teams style="color: #fff;">
+        <teamL id="tl" class="ct">
+            <img id="logoL" class="logo_l" />
+            <div class="tung" id="abbrL" style="font-size: 30px;">LEFT</div>
+            <div class="din1" id="tnameL">Team Left</div>
+            <div id="scoreL" style="font-size: 20px; margin-top: -10px;"></div>
+            <div>
+                <button onclick="sendCommand('score-add', 'L')">+</button>
+                <button onclick="sendCommand('score-rem', 'L')">-</button>
+            </div>
+            <div>
+                Timeouts Remaining: <span id="remL"></span> <button onclick="sendCommand('timeout-start', 'L')">Start Timeout</button>
+                <button onclick="header('mp', 'L')">Display Match Point</button>
+            </div>
+        </teamL>
+        <div style="position: absolute; justify-self: center; align-self: center;"><button onclick="switchsides()" style="font-size: 20px;">⇋</button></div>
+        <teamR id="tr" class="t">
+            <img id="logoR" class="logo_l" />
+            <div class="tung" id="abbrR" style="font-size: 30px;">RGHT</div>
+            <div class="din1" id="tnameR">Team Left</div>
+            <div id="scoreR" style="font-size: 20px; margin-top: -10px;"></div>
+            <div>
+                <button onclick="sendCommand('score-add', 'R')">+</button>
+                <button onclick="sendCommand('score-rem', 'R')">-</button>
+            </div>
+            <div>
+                Timeouts Remaining: <span id="remR"></span> <button onclick="sendCommand('timeout-start', 'R')">Start Timeout</button>
+                <button onclick="header('mp', 'R')">Display Match Point</button>
+            </div>
+        </teamR>
+    </teams>
     <h2 class="din1" id="map">Map x: Map</h2>
     <button onclick="sendCommand('reload-file', '')">Reload Config file</button></br>
-    <button onclick="update('half', '1')">First Half (Defenders left)</button>
-    <button onclick="update('half', '2')">Second Half (Defenders right)</button></br>
     <button onclick="sendCommand('timeout-end')">Stop Timeout</button>
     <button onclick="sendCommand('timeout-reset')">Reset Timeouts</button></br>
     <button onclick="header('tp', '0')">Display Technical Pause</button>
     <button onclick="sendCommand('header-end')">Remove the Active header</button>
-    <h1 class="tung"><img id="logoL" class="logo_s" /> <span id="tnameL">Team Left</span> =<span id="abbrL">LEFT</span></h1>
-    <span id="lscoreL">Maps won: <span id="scoreL"></span></span><button onclick="sendCommand('score-add', 'L')">+</button><button onclick="sendCommand('score-rem', 'L')">-</button></br>
-    Timeouts Remaining: <span id="remL"></span> <button onclick="sendCommand('timeout-start', 'L')">Start Timeout</button>
-    <button onclick="header('mp', 'L')">Display Match Point</button>
-    
-    <h1 class="tung"><img id="logoR" class="logo_s" /> <span id="tnameR">Team Right</span> =<span id="abbrR">RAYT</span></h1>
-    <span id="lscoreR">Maps won: <span id="scoreR"></span></span><button onclick="sendCommand('score-add', 'R')">+</button><button onclick="sendCommand('score-rem', 'R')">-</button></br>
-    Timeouts Remaining: <span id="remR"></span> <button onclick="sendCommand('timeout-start', 'R')">Start Timeout</button>
-    <button onclick="header('mp', 'R')">Display Match Point</button>
 </body>
 </html>
