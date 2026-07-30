@@ -27,7 +27,7 @@ Currently, due to VALORANT Client's limitations, there's no automatic game feeds
 *   **You have to install [Node.js]([https://nodejs.org/en/) in order to run this Overlay.**
     
 
-1.  Clone the repo
+1.  Clone the repo or [download ZIP](https://github.com/rvnexe/RAVE-Valorant-Overlay/archive/refs/heads/main.zip)
     
 2.  Open a terminal in repo's folder and run this command:
     
