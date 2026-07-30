@@ -20,6 +20,8 @@ Currently, due to VALORANT Client's limitations, there's no automatic game feeds
 ![a screenshot](https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/screenshot1.png?raw=true)
 </details>
 
+## IF YOU RAN A TOURNAMENT USING THIS, PLEASE [OPEN A DISCUSSION⇗](https://github.com/rvnexe/RAVE-Valorant-Overlay/discussions/new?category=hall-of-fame) SO I CAN BE HAPPY ABOUT IT🥺🎉🎉🎉
+
 # Getting Started
 
 *   **You have to install [Node.js]([https://nodejs.org/en/) in order to run this Overlay.**
@@ -72,7 +74,7 @@ The Overlay itself: localhost:7777/overlay.html
 
 This tool is available for everyone under GPL-3.0 License. _(TLDR: u can copy, modify and distribute it but under the same license, use privately or for commercial purposes, and it's provided without warranty. [learn more](https://gist.github.com/kn9ts/cbe95340d29fc1aaeaa5dd5c059d2e60))_
 
-### It's not necessary to credit me anywhere if you're using it, but it will be an endless kindness if you do :3333
+### It's not necessary to credit me anywhere if you're using it, but it will be so kind if you do... 👉👈
 
 # Fonts License
 
