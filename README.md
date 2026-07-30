@@ -70,9 +70,10 @@ The Overlay itself: localhost:7777/overlay.html
 
 # Terms of usage
 
+## IF YOU RAN A TOURNAMENT USING THIS, PLEASE OPEN A DISCUSSION SO I CAN BE HAPPY ABOUT IT🥺🎉🎉🎉
 This tool is available for everyone under GPL-3.0 License. _(TLDR: u can copy, modify and distribute it but under the same license, use privately or for commercial purposes, and it's provided without warranty. [learn more](https://gist.github.com/kn9ts/cbe95340d29fc1aaeaa5dd5c059d2e60))_
 
-### It's not necessary to credit me anywhere if you're using it, but it will be an endless kindness if you do :3333
+### It's not necessary to credit me anywhere if you're using it, but it will be so kind if you do... 👉👈
 
 # Fonts License
 
