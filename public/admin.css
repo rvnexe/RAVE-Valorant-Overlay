@@ -88,6 +88,10 @@ teams > * {
     justify-content: center;
     align-items: center;
 }
+teamL > div , teamR > div {
+	text-align: center;
+	font-family: 'DIN Regular', sans-serif;
+}
 
 .tung {
 	font-family: 'Tungsten';
