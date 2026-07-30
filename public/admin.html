@@ -116,8 +116,12 @@
             <div class="din1" id="tnameL">Team Left</div>
             <div id="scoreL" style="font-size: 20px; margin-top: -10px;"></div>
             <div>
-                <button onclick="sendCommand('score-add', 'L')">+</button>
-                <button onclick="sendCommand('score-rem', 'L')">-</button>
+                <txbut onclick="sendCommand('score-add', 'L')">
+                    <tip>+1 Map</tip>+
+                </txbut>
+                <txbut onclick="sendCommand('score-rem', 'L')">
+                    <tip>-1 Map</tip>-
+                </txbut>
             </div>
             <div>
                 Timeouts Remaining: <span id="remL"></span><br><button onclick="sendCommand('timeout-start', 'L')">Start Timeout</button>
@@ -131,8 +135,12 @@
             <div class="din1" id="tnameR">Team Left</div>
             <div id="scoreR" style="font-size: 20px; margin-top: -10px;"></div>
             <div>
-                <button onclick="sendCommand('score-add', 'R')">+</button>
-                <button onclick="sendCommand('score-rem', 'R')">-</button>
+                <txbut onclick="sendCommand('score-add', 'R')">
+                    <tip>+1 Map</tip>+
+                </txbut>
+                <txbut onclick="sendCommand('score-rem', 'R')">
+                    <tip>-1 Map</tip>-
+                </txbut>
             </div>
             <div>
                 Timeouts Remaining: <span id="remR"></span><br><button onclick="sendCommand('timeout-start', 'R')">Start Timeout</button>
