@@ -33,6 +33,44 @@ header {
 	font-family: 'DIN Medium';
 }
 
+but {
+	cursor: pointer;
+	display: inline-flex;
+	border-radius: 5px;
+	background-color: #ffffffaa;
+	color: #000;
+	font-family: 'DIN Medium', sans-serif;
+	font-size: 20px;
+}
+txbut {
+	padding-inline: 5px;
+	cursor: pointer;
+	display: inline-flex;
+	border-radius: 5px;
+	background-color: #ffffffaa;
+	color: #000;
+	font-family: 'DIN Medium', sans-serif;
+	font-size: 20px;
+	USER-SELECT: NONE;
+}
+
+but:hover tip, txbut:hover tip{
+  	visibility: visible;
+}
+tip {
+  	visibility: hidden;
+  	background-color: #000000a4;
+  	color: #fff;
+  	text-align: center;
+	font-size: 20px;
+  	border-radius: 6px;
+  	padding: 3px 3px;
+  	position: absolute;
+	translate: 20px 20px;
+  	z-index: 1;
+	USER-SELECT: NONE;
+}
+
 teams {
 	width: 100%;
     display: grid;
