@@ -20,9 +20,9 @@ Currently, due to VALORANT Client's limitations, there's no automatic game feeds
 ![a screenshot](https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/screenshot1.png?raw=true)
 </details>
 
-## IF YOU RAN A TOURNAMENT USING THIS, PLEASE [OPEN A DISCUSSION⇗](https://github.com/rvnexe/RAVE-Valorant-Overlay/discussions/new?category=hall-of-fame) SO I CAN BE HAPPY ABOUT IT🥺🎉🎉🎉
+### IF YOU RAN A TOURNAMENT USING THIS, PLEASE [OPEN A DISCUSSION⇗](https://github.com/rvnexe/RAVE-Valorant-Overlay/discussions/new?category=hall-of-fame) SO I CAN BE HAPPY ABOUT IT🥺🎉🎉🎉
 
-# Getting Started
+## Getting Started
 
 > [!NOTE]
 > **You have to install [Node.js](https://nodejs.org/en/) in order to run this Overlay.**
@@ -39,7 +39,7 @@ npm install
 3.  Wait until you see this message: `added x packages, and audited x packages`
     
 
-# How to use
+## How to use
 
 ### Starting the overlay
 
@@ -70,12 +70,13 @@ The Overlay itself: localhost:7777/overlay.html
 2.  Configure it for the desired team in the **Match Setup** page.
     
 
-# Terms of usage
+## Terms of usage
 
 This tool is available for everyone under GPL-3.0 License. _(TLDR: u can copy, modify and distribute it but under the same license, use privately or for commercial purposes, and it's provided without warranty. [learn more](https://gist.github.com/kn9ts/cbe95340d29fc1aaeaa5dd5c059d2e60))_
 
-### It's not necessary to credit me anywhere if you're using it, but it will be so kind if you do... 👉👈
+> [!IMPORTANT]
+> Crediting me isn’t necessary, but it would mean a lot if you did... 👉👈
 
-# Fonts License
+### Fonts License
 
 I did include some fonts (`Tungsten` & `DIN Next`) with this repository, to use in this project and it's purpose only. Any other usage is not intended by me, and will not be my fault, and I'll not be responsible for any illegal usage of those fonts.
