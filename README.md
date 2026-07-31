@@ -79,4 +79,4 @@ This tool is available for everyone under GPL-3.0 License. _(TLDR: u can copy, m
 
 ### Fonts License
 
-Fonts (`Tungsten` and `DIN Next`) aren't licensed! Be aware of that.
+Fonts (`Tungsten` and `DIN Next`) aren't licensed! The open-source license applies to my code—not to those fonts. Soooooo take care of your projects made based on this code! If this ever becomes a problem for you, replacing them with free alternatives is the safest path. Just wanted you to know...
