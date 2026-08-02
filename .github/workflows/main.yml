@@ -1,0 +1,16 @@
+on:
+  discussion:
+    types: [created]
+
+jobs:
+  mention:
+    runs-on: ubuntu-latest
+    permissions: 
+      discussions: write
+
+    steps:
+      - name: respond
+        uses: wesleyscholl/discussion-auto-responder@v1.0.8
+        with:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          comment_body: @rvneXe
