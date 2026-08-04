@@ -113,6 +113,7 @@
                 document.querySelectorAll('.ttn').forEach(element => {
                     element.style.display = "block";
                 });
+                ttanima.forEach(i => i.beginElement());
             } else {
                 document.querySelectorAll('.ttt').forEach(element => {
                     element.removeAttribute("show", "");
@@ -120,6 +121,9 @@
                 document.querySelectorAll('.ttn').forEach(element => {
                     element.style.display = "none";
                 });
+                setTimeout(() => {
+                    ttanima.forEach(i => i.endElement());
+                }, 500);
             }
 
             if (state.header.isActive == 1) {
@@ -154,6 +158,7 @@
         // Set up the overlay based on the server's state
         socket.on('initialize-overlay', (state) => {
             updateOverlay(state);
+            ttanima.forEach(i => i.endElement());
         });
 
         // Listen for updates from admin
@@ -285,6 +290,48 @@
                         d="M0.0,6.0 L0.0,0.0 L600.0,0.0 L600.0,6.0 L589.0,6.0 L585.0,2 L15,2 L11,6.0 L0.0,6.0 Z" />
                 </svg>
             </div>
+            <div class="ttt" id="ttanim" style="width: 600px; height: 148px; position: absolute;">
+                <svg width="600" height="148" style="position: relative;">
+                    <defs>
+                        <g id="r1">
+                        <rect x="0" y="0" width="40" height="30" fill="#FFFFFF50">
+                            <animate attributeName="y" from="-35" to="50" dur="4s" repeatCount="indefinite" calcMode="spline"
+                                keySplines="0.42 0 1 1" />
+                            <animate attributeName="width" from="40" to="7" dur="4s" repeatCount="indefinite" />
+                            <animate attributeName="height" from="30" to="10" dur="4s" repeatCount="indefinite" />
+                            <animate attributeName="fill" from="#FFFFFF50" to="#FFFFFF00" dur="4s" repeatCount="indefinite" />
+                        </rect>
+                        </g>
+                        <g id="r2">
+                        <rect x="0" y="0" width="60" height="30" fill="#FFFFFF50">
+                            <animate attributeName="y" from="-45" to="50" dur="7s" repeatCount="indefinite" calcMode="spline"
+                                keySplines="0.42 0 1 1" />
+                            <animate attributeName="width" from="60" to="15" dur="7s" repeatCount="indefinite" />
+                            <animate attributeName="fill" from="#FFFFFF50" to="#FFFFFF00" dur="7s" repeatCount="indefinite" />
+                        </rect>
+                        </g>
+                        <g id="rbig">
+                        <rect x="0" y="0" width="100" height="100" fill="#FFFFFF30">
+                            <animate attributeName="y" from="-105" to="70" dur="12s" repeatCount="indefinite" calcMode="spline"
+                                keySplines="0.42 0 1 1" />
+                            <animate attributeName="width" from="100" to="70" dur="12s" repeatCount="indefinite" />
+                            <animate attributeName="height" from="100" to="50" dur="12s" repeatCount="indefinite" />
+                            <animate attributeName="fill" from="#FFFFFF30" to="#FFFFFF00" dur="12s" repeatCount="indefinite" />
+                        </rect>
+                        </g>
+                        <g id="rbig2">
+                        <rect x="0" y="0" width="120" height="200" fill="#FFFFFF30">
+                            <animate attributeName="y" from="-120" to="140" dur="10s" repeatCount="indefinite" calcMode="spline"
+                                keySplines="0.42 0 1 1" />
+                            <animate attributeName="width" from="200" to="80" dur="10s" repeatCount="indefinite" />
+                            <animate attributeName="height" from="120" to="90" dur="10s" repeatCount="indefinite" />
+                            <animate attributeName="fill" from="#FFFFFF30" to="#FFFFFF00" dur="10s" repeatCount="indefinite" />
+                        </rect>
+                        </g>
+                    </defs>
+                    <use href="#r1" x="120"/><use href="#r1" x="240"/><use href="#r1" x="500"/><use href="#r2" x="340"/><use href="#r2" x="530"/><use href="#r2" x="40"/><use href="#rbig" x="60"/><use href="#rbig" x="440"/><use href="#rbig2" x="350"/><use href="#rbig2" x="-50"/><use href="#rbig2" x="580"/>
+                </svg>
+            </div>
             <div style="z-index: 42; text-align: center;" id="tttext" class="ttt">
                 <div class="tung" style="font-size: 105px; text-align: center; color: #ffffff; line-height: 100px;">TIMEOUT</br></div>
                 <div class="din0" style="font-size: 32px; color: #ffffff;" id="ttname">TEAM</div>
@@ -296,5 +343,8 @@
                 <span id="ttused">0/0</span></div>
         </div>
 </body>
+<script>
+    const ttanima = document.querySelectorAll('animate')
+</script>
 
 </html>
