@@ -15,9 +15,13 @@ Currently, due to VALORANT Client's limitations, there's no automatic game feeds
 <details><summary>Click to view more</summary>
 
 <img width="1134" alt="Image" src="https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/timeout.png?raw=true"/>
+
 ![a screenshot](https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/techpause.png?raw=true)
+
 ![a screenshot](https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/matchpoint.png?raw=true)
+
 ![a screenshot](https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/screenshot1.png?raw=true)
+
 </details>
 
 ### IF YOU RAN A TOURNAMENT USING THIS, PLEASE [OPEN A DISCUSSION⇗](https://github.com/rvnexe/RAVE-Valorant-Overlay/discussions/new?category=hall-of-fame) SO I CAN BE HAPPY ABOUT IT🥺🎉🎉🎉
