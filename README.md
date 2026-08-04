@@ -11,7 +11,7 @@ Currently, due to VALORANT Client's limitations, there's no automatic game feeds
 * **Match Point header**
 
 ## Screenshots
-<img width="1134" alt="Image" src="https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/heading.png?raw=true"/>
+<img width="1134" alt="Image" src="https://raw.githubusercontent.com/rvneXe/RAVE-Valorant-Overlay/refs/heads/main/screenshots/heading.png"/>
 <details><summary>Click to view more</summary>
 
 <img width="1134" alt="Image" src="https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/timeout.png?raw=true"/>
