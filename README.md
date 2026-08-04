@@ -11,10 +11,10 @@ Currently, due to VALORANT Client's limitations, there's no automatic game feeds
 * Match Point header (Team Name and their side)
 
 ## Screenshots
-![a screenshot](https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/heading.png?raw=true)
+<img width="1134" alt="Image" src="https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/heading.png?raw=true"/>
 <details><summary>Click to view more</summary>
 
-![a screenshot](https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/timeout.png?raw=true)
+<img width="1134" alt="Image" src="https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/timeout.png?raw=true"/>
 ![a screenshot](https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/techpause.png?raw=true)
 ![a screenshot](https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/matchpoint.png?raw=true)
 ![a screenshot](https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/screenshot1.png?raw=true)
