@@ -1,14 +1,14 @@
-# RAVE - A VALORANT Overlay
+# RAVE - Overlay for VALORANT Tournaments
 
-A manually-controlled Observer HUD to be used for Valorant Esports streaming and observation.
+A manually-controlled HUD to be used for Valorant Esports streaming and observation; Perfectly aligned with VALORANT's native UI.
 
-Currently, due to VALORANT Client's limitations, there's no automatic game feeds; Everything on this Tool is manually controlled through 2 HTML pages for **Administration** and a **Match setup**. The Overlay page can be used in OBS Browser Source or anywhere else.
+Currently, due to VALORANT Client's limitations, there's no automatic game feeds; This Tool is manually controlled through an HTML page. Overlay can be used in **OBS Browser Source** or anywhere else.
 
 ## Features
-* Team Information (Name, Logo, Map score) with Side-Switching feature.
-* Timeout indicator (Team, Side and their remaining timeouts) + Animated background
-* Technical Pause Indicator
-* Match Point header (Team Name and their side)
+* **Teams scoreboard**
+* **Timeout indicator:** Aligned with ingame timer + Timeouts count & Animated background
+* **TECH PAUSE Indicator**
+* **Match Point header**
 
 ## Screenshots
 <img width="1134" alt="Image" src="https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/heading.png?raw=true"/>
