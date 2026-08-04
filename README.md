@@ -6,7 +6,7 @@ Currently, due to VALORANT Client's limitations, there's no automatic game feeds
 
 ## Features
 * Team Information (Name, Logo, Map score) with Side-Switching feature.
-* Timeout indicator (Team, Side and their remaining timeouts)
+* Timeout indicator (Team, Side and their remaining timeouts) + Animated background
 * Technical Pause Indicator
 * Match Point header (Team Name and their side)
 
