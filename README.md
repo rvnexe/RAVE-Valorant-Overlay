@@ -9,7 +9,7 @@ Currently, due to VALORANT Client's limitations, there's no automatic game feeds
 * **Timeout indicator:** Aligned with ingame timer + Timeouts count & Animated background
 * **TECH PAUSE Indicator**
 * **Match Point header**
-<img width="670px" alt="Image" src="https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/tasks.webp?raw=true"/>
+[<img width="670px" alt="Image" src="https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/tasks.webp?raw=true"/>](https://github.com/rvnexe/RAVE-Valorant-Overlay/issues)
 
 ## Screenshots
 <img width="1134" alt="Image" src="https://raw.githubusercontent.com/rvneXe/RAVE-Valorant-Overlay/refs/heads/main/screenshots/heading.png"/>
