@@ -12,6 +12,16 @@ Currently, due to VALORANT Client's limitations, there's no automatic game feeds
 - [ ] https://github.com/rvnexe/RAVE-Valorant-Overlay/issues/4
 - [ ] https://github.com/rvnexe/RAVE-Valorant-Overlay/issues/5
 - [ ] https://github.com/rvnexe/RAVE-Valorant-Overlay/issues/6
+- [ ] https://github.com/rvnexe/RAVE-Valorant-Overlay/issues/7
+- [ ] https://github.com/rvnexe/RAVE-Valorant-Overlay/issues/8
+- [ ] https://github.com/rvnexe/RAVE-Valorant-Overlay/issues/9
+- [ ] https://github.com/rvnexe/RAVE-Valorant-Overlay/issues/10
+- [ ] https://github.com/rvnexe/RAVE-Valorant-Overlay/issues/11
+- [ ] https://github.com/rvnexe/RAVE-Valorant-Overlay/issues/12
+- [ ] https://github.com/rvnexe/RAVE-Valorant-Overlay/issues/13
+- [ ] https://github.com/rvnexe/RAVE-Valorant-Overlay/issues/14
+- [ ] https://github.com/rvnexe/RAVE-Valorant-Overlay/issues/15
+- [ ] https://github.com/rvnexe/RAVE-Valorant-Overlay/issues/16
 
 ## Screenshots
 <img width="1134" alt="Image" src="https://raw.githubusercontent.com/rvneXe/RAVE-Valorant-Overlay/refs/heads/main/screenshots/heading.png"/>
