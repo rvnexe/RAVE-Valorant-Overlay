@@ -1,4 +1,5 @@
-# RAVE - Overlay for VALORANT Tournaments
+<h1 align="center"> RAVE - Overlay for VALORANT Tournaments<br><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=2b2b2b&color=61DAFB">
+</h1>
 
 A manually-controlled HUD to be used for Valorant Esports streaming and observation; Perfectly aligned with VALORANT's native UI.
 
