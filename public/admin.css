@@ -55,6 +55,7 @@ txbut {
 	font-family: 'DIN Medium', sans-serif;
 	font-size: 20px;
 	USER-SELECT: NONE;
+	justify-content: center;
 }
 
 but:hover tip, txbut:hover tip{
