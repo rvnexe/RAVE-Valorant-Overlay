@@ -57,6 +57,9 @@ txbut {
 	USER-SELECT: NONE;
 	justify-content: center;
 }
+.onechar {
+	width: 1.2ch;
+}
 
 but:hover tip, txbut:hover tip{
   	visibility: visible;
