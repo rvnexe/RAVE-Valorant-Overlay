@@ -150,3 +150,41 @@ h1 {
 	opacity: 0;
 	content: url(./img/d1.png);
 }
+
+
+.noteditmode input {
+	display: none;
+}
+input {
+	background: 0;
+    color: inherit;
+    text-align: center;
+	field-sizing: content;
+	border-style: dotted;
+    margin: 2px;
+    background: #0000004d;
+}
+input:-internal-autofill-selected, input:-webkit-autofill, input:-webkit-autofill:focus{
+	-webkit-box-shadow: 0 0 0px 1000px #fd5d013d inset;
+    appearance: auto !important;
+    color: fieldtext !important;
+	field-sizing: content !important;
+}
+
+.noteditmode #apply, .noteditmode #kanseru,
+.editmode #edit1 {
+	display: none;
+}
+.editmode div.abbrL, .editmode div.abbrR, .editmode div.tnameL, .editmode div.tnameR, .editmode div.eventname, .editmode div.eventstage,
+.editmode div.logopathL, .editmode div.logopathR {
+	display: none;
+}
+
+.noteditmode #edit1,
+.editmode #apply, .editmode #kanseru {
+	display: inline-flex;
+}
+.editmode input.abbrL, .editmode input.abbrR, .editmode input.tnameL, .editmode input.tnameR, .editmode input.eventname, .editmode input.eventstage,
+.editmode input.logopathL, .editmode input.logopathR {
+	display: block;
+}

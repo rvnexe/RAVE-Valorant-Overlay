@@ -12,8 +12,8 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="admin.js"></script>
 </head>
-<body>
 
+<body class="noteditmode">
     <header>
         <qa style="display: flex; gap: 4px; position: fixed; left: 4px;">
             <but onclick="sendCommand('reload-file', '')">
@@ -22,29 +22,58 @@
                     <path d="M240-478q0 45 17 87.5t53 78.5l10 10v-58q0-17 11.5-28.5T360-400q17 0 28.5 11.5T400-360v160q0 17-11.5 28.5T360-160H200q-17 0-28.5-11.5T160-200q0-17 11.5-28.5T200-240h70l-16-14q-52-46-73-105t-21-119q0-94 48-170.5T337-766q14-8 29.5-1t20.5 23q5 15-.5 30T367-691q-58 32-92.5 88.5T240-478Zm480-4q0-45-17-87.5T650-648l-10-10v58q0 17-11.5 28.5T600-560q-17 0-28.5-11.5T560-600v-160q0-17 11.5-28.5T600-800h160q17 0 28.5 11.5T800-760q0 17-11.5 28.5T760-720h-70l16 14q49 49 71.5 106.5T800-482q0 94-48 170.5T623-194q-14 8-29.5 1T573-216q-5-15 .5-30t19.5-23q58-32 92.5-88.5T720-482Z" />
                 </svg>
             </but>
-            <but onclick="window.location = './setup.html'";>
+            <but onclick="Edit1()" id="edit1">
                 <tip>Edit match details</tip>
-                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 24 24" height="36px" width="36px"><path d="M5 21c-.5 0-1-.2-1.4-.6S3 19.5 3 19V5c0-.5.2-1 .6-1.4S4.5 3 5 3h6.5c.3 0 .6.1.8.3s.2.4.2.7-.1.5-.3.7c-.1.2-.4.3-.7.3H5v14h14v-6.5c0-.3.1-.6.3-.8s.4-.2.7-.2.5.1.7.2c.2.2.3.4.3.8V19c0 .5-.2 1-.6 1.4s-.8.6-1.4.6zm4-7v-2.4c0-.3.1-.5.2-.8.1-.2.2-.5.4-.6l8.6-8.6c.2-.2.4-.4.7-.5s.5-.1.7-.1c.3 0 .5 0 .8.1.2.1.5.2.7.5L22.4 3c.2.2.3.4.4.7s.2.4.2.7 0 .5-.1.7-.2.5-.4.7l-8.6 8.6c-.2.2-.4.3-.6.4s-.5.2-.8.2H10c-.3 0-.5-.1-.7-.3S9 14.3 9 14m12-9.6L19.6 3zM11 13h1.4l5.8-5.8-.7-.7-.7-.7-5.8 5.8zm6.5-6.5-.7-.7zl.7.7z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 24 24" height="36px" width="36px">
+                    <path d="M5 21c-.5 0-1-.2-1.4-.6S3 19.5 3 19V5c0-.5.2-1 .6-1.4S4.5 3 5 3h6.5c.3 0 .6.1.8.3s.2.4.2.7-.1.5-.3.7c-.1.2-.4.3-.7.3H5v14h14v-6.5c0-.3.1-.6.3-.8s.4-.2.7-.2.5.1.7.2c.2.2.3.4.3.8V19c0 .5-.2 1-.6 1.4s-.8.6-1.4.6zm4-7v-2.4c0-.3.1-.5.2-.8.1-.2.2-.5.4-.6l8.6-8.6c.2-.2.4-.4.7-.5s.5-.1.7-.1c.3 0 .5 0 .8.1.2.1.5.2.7.5L22.4 3c.2.2.3.4.4.7s.2.4.2.7 0 .5-.1.7-.2.5-.4.7l-8.6 8.6c-.2.2-.4.3-.6.4s-.5.2-.8.2H10c-.3 0-.5-.1-.7-.3S9 14.3 9 14m12-9.6L19.6 3zM11 13h1.4l5.8-5.8-.7-.7-.7-.7-5.8 5.8zm6.5-6.5-.7-.7zl.7.7z" />
+                </svg>
+            </but>
+            <but onclick="{requestState(); Edit0();}" style="color: rgb(128, 0, 0);" id="kanseru">
+                <tip>Discard Changes</tip>
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 -960 960 960" height="36px" width="36px">
+                    <path fill="currentColor" d="m480-424 116 116q11 11 28 11t28-11q11-11 11-28t-11-28L536-480l116-116q11-11 11-28t-11-28q-11-11-28-11t-28 11L480-536 364-652q-11-11-28-11t-28 11q-11 11-11 28t11 28l116 116-116 116q-11 11-11 28t11 28q11 11 28 11t28-11l116-116ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z" />
+                </svg>
+            </but>
+            <but onclick="window.location = './setup.html'" style="opacity: 0.6;">
+                <tip>Edit match details (Deprecated)</tip>
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 24 24" height="36px" width="36px">
+                    <path d="M5 21c-.5 0-1-.2-1.4-.6S3 19.5 3 19V5c0-.5.2-1 .6-1.4S4.5 3 5 3h6.5c.3 0 .6.1.8.3s.2.4.2.7-.1.5-.3.7c-.1.2-.4.3-.7.3H5v14h14v-6.5c0-.3.1-.6.3-.8s.4-.2.7-.2.5.1.7.2c.2.2.3.4.3.8V19c0 .5-.2 1-.6 1.4s-.8.6-1.4.6zm4-7v-2.4c0-.3.1-.5.2-.8.1-.2.2-.5.4-.6l8.6-8.6c.2-.2.4-.4.7-.5s.5-.1.7-.1c.3 0 .5 0 .8.1.2.1.5.2.7.5L22.4 3c.2.2.3.4.4.7s.2.4.2.7 0 .5-.1.7-.2.5-.4.7l-8.6 8.6c-.2.2-.4.3-.6.4s-.5.2-.8.2H10c-.3 0-.5-.1-.7-.3S9 14.3 9 14m12-9.6L19.6 3zM11 13h1.4l5.8-5.8-.7-.7-.7-.7-5.8 5.8zm6.5-6.5-.7-.7zl.7.7z" />
+                </svg>
             </but>
         </qa>
         <div>
-            <div>Admin Panel</div>
-            <div class="din1" id="matchtitle" style="font-size: 20px;">Event name - Event stage</div>
+            <div style="user-select: none;">Admin Panel</div>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <div class="din1 eventname" style="font-size: 20px;">Event name</div>
+                <input class="din1 eventname" style="font-size: 20px;" type="text" autocomplete="on" spellcheck="false" id="event_name" value="Event name" />
+                &nbsp;-&nbsp;
+                <div class="din1 eventstage" style="font-size: 20px;">Stage: Level</div>
+                <input class="din1 eventstage" style="font-size: 20px;" type="text" autocomplete="on" spellcheck="false" id="event_stage" value="Stage: Level" />
+            </div>
         </div>
-        <but>
-        </but>
+        <qa style="display: flex; gap: 4px; position: fixed; right: 4px;">
+            <but onclick="applySettings()" style="color: rgb(11, 128, 0);" id="apply">
+                <tip style="translate: -40px 20px;">Apply</tip>
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 -960 960 960" height="36px" width="36px">
+                    <path fill="currentColor" d="m382-354 339-339q12-12 28-12t28 12q12 12 12 28.5T777-636L410-268q-12 12-28 12t-28-12L182-440q-12-12-11.5-28.5T183-497q12-12 28.5-12t28.5 12l142 143Z" />
+                </svg>
+            </but>
+        </qa>
     </header>
     <teams style="color: #fff;">
         <teamL id="tl" class="ct">
-            <img id="logoL" class="logo_l" />
-            <div class="tung" id="abbrL" style="font-size: 30px;">LEFT</div>
-            <div class="din1" id="tnameL">Team Left</div>
+            <input class="mono logoL" type="text" autocomplete="on" spellcheck="false" value="userdata/left.png" id="logoL" />
+            <img class="logo_l logoL" />
+            <div class="tung abbrL" style="font-size: 30px;">LEFT</div>
+            <input class="tung abbrL" style="font-size: 30px;" type="text" autocomplete="on" spellcheck="false" id="abbrL" maxlength="4" value="LEFT" />
+            <div class="din1 tnameL">Team Left</div>
+            <input class="din1 tnameL" type="text" autocomplete="on" spellcheck="false" value="Team Left" id="nameL" />
             <div id="scoreL" style="font-size: 20px; margin-top: -10px;"></div>
             <div>
-                <txbut onclick="sendCommand('score-add', 'L')">
+                <txbut class="onechar" onclick="sendCommand('score-add', 'L')">
                     <tip>+1 Map</tip>+
                 </txbut>
-                <txbut onclick="sendCommand('score-rem', 'L')">
+                <txbut class="onechar" onclick="sendCommand('score-rem', 'L')">
                     <tip>-1 Map</tip>-
                 </txbut>
             </div>
@@ -56,15 +85,18 @@
         <div style="position: absolute; justify-self: center; align-self: center;"><button onclick="switchsides()" style="font-size: 20px;">⇋</button></div>
         <div style="position: absolute; justify-self: center; align-self: center; translate: 0 60px;"><button class="din1" onclick="sendCommand('timeout-end')" style="font-size: 18px;">⨉ Timeout</button></div>
         <teamR id="tr" class="t">
-            <img id="logoR" class="logo_l" />
-            <div class="tung" id="abbrR" style="font-size: 30px;">RGHT</div>
-            <div class="din1" id="tnameR">Team Left</div>
+            <input class="mono logoR" type="text" autocomplete="on" spellcheck="false" value="userdata/rght.png" id="logoR" />
+            <img id="logoR" class="logo_l logoR" />
+            <div class="tung abbrR" style="font-size: 30px;">RGHT</div>
+            <input class="tung abbrR" style="font-size: 30px;" type="text" autocomplete="on" spellcheck="false" id="abbrR" maxlength="4" value="RGHT" />
+            <div class="din1 tnameR">Team Right</div>
+            <input class="din1 tnameR" type="text" autocomplete="on" spellcheck="false" value="Team Right" id="nameR" />
             <div id="scoreR" style="font-size: 20px; margin-top: -10px;"></div>
             <div>
-                <txbut onclick="sendCommand('score-add', 'R')">
+                <txbut class="onechar" onclick="sendCommand('score-add', 'R')">
                     <tip>+1 Map</tip>+
                 </txbut>
-                <txbut onclick="sendCommand('score-rem', 'R')">
+                <txbut class="onechar" onclick="sendCommand('score-rem', 'R')">
                     <tip>-1 Map</tip>-
                 </txbut>
             </div>
