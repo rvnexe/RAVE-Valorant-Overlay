@@ -43,6 +43,7 @@ but {
 	font-family: 'DIN Medium', sans-serif;
 	font-size: 20px;
 	gap: 2px;
+	height: min-content;
 }
 txbut {
 	padding-inline: 5px;
