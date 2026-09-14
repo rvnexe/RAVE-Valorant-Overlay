@@ -114,6 +114,9 @@ teamL > div , teamR > div {
 .din2 {
 	font-family: 'DIN Medium';
 }
+.mono {
+	font-family: monospace, sans-serif;
+}
 
 .logo_s {
     width: 30px;
