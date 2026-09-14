@@ -1,6 +1,6 @@
 const socket = io();
 
-let winby = { bo5: "3", bo3: "2", bo1: "1" };
+const winby = { bo5: "3", bo3: "2", bo1: "1" };
 let localstate = {};
 
 // Update admin panel UI when state changes
@@ -25,6 +25,7 @@ function updateAdminUI(state) {
     document.getElementById("tnameL").innerText = state.nameL.toUpperCase();
     document.getElementById("abbrL").innerText = state.abbrL;
     document.getElementById("logoL").style = `content: url("${state.logoL}")`;
+    // Left LLLLLLLLLLLLLL
     document.getElementById("scoreL").innerText =
         "■".repeat(state.scoreL) +
         "□".repeat(winby[state.format] - state.scoreL);
@@ -33,6 +34,7 @@ function updateAdminUI(state) {
     document.getElementById("tnameR").innerText = state.nameR.toUpperCase();
     document.getElementById("abbrR").innerText = state.abbrR;
     document.getElementById("logoR").style = `content: url("${state.logoR}")`;
+    // Right RRRRRRRRRRRRR
     document.getElementById("scoreR").innerText =
         "■".repeat(state.scoreR) +
         "□".repeat(winby[state.format] - state.scoreR);
