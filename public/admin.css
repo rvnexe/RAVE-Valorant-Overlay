@@ -27,6 +27,7 @@ header {
 	height: 60px;
 	padding: 0 5px;
 	background: #c171da;
+    box-sizing: border-box;
 	text-align: center;
 	font-size: 24px;
 	font-family: 'DIN Medium';
