@@ -176,7 +176,5 @@ const PORT = 7777;
 server.listen(PORT, () => {
     console.log(`Server is now running on localhost:${PORT}`);
     console.log(`- Admin page: http://localhost:${PORT}/admin.html`);
-    console.log(`- Match setup page: http://localhost:${PORT}/setup.html`);
-    console.log(' ');
     console.log(`- Overlay: http://localhost:${PORT}/overlay.html`);
 });

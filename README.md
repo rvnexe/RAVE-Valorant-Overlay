@@ -14,7 +14,8 @@ Currently, due to VALORANT Client's limitations, there's no automatic game feeds
 [<img width="670px" alt="Image" src="https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/tasks.webp?raw=true"/>](https://github.com/rvnexe/RAVE-Valorant-Overlay/issues)
 
 ## Screenshots
-<img width="1134" alt="Image" src="https://raw.githubusercontent.com/rvneXe/RAVE-Valorant-Overlay/refs/heads/main/screenshots/heading.png"/>
+<img width="1134" alt="Image" src="screenshots/heading.png"/>
+<img width="1134" alt="Image" src="screenshots/admin.png"/>
 <details><summary>Click to view more</summary>
 
 <img width="1134" alt="Image" src="https://github.com/rvneXe/RAVE-Valorant-Overlay/blob/main/screenshots/timeout.png?raw=true"/>
@@ -57,14 +58,13 @@ npm install
 node server.js
 ```
 
-2.  The overlay server is started now. Use these addresses to access Admin, Setup, and the Overlay itself:
+2.  The overlay server is started now. Use these addresses to access Admin Page and the Overlay itself:
     
 
 ```
 Admin: localhost:7777/admin.html
-Match setup: localhost:7777/setup.html
 
-The Overlay itself: localhost:7777/overlay.html
+Overlay: localhost:7777/overlay.html
 ```
 
 ### Adding team logos
