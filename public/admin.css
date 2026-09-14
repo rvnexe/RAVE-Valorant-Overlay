@@ -127,6 +127,7 @@ teamL > div , teamR > div {
     width: 100px;
     height: 100px;
 	background-color: #0e1820;
+	padding: 5px;
 }
 
 .ct {
